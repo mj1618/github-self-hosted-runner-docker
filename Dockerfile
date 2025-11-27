@@ -17,7 +17,7 @@ RUN curl -O -L https://github.com/actions/runner/releases/download/v${RUNNER_VER
     && tar xzf ./actions-runner-linux-arm64-${RUNNER_VERSION}.tar.gz
 
 
-RUN apt install -y --no-install-recommends sudo
+RUN apt install -y --no-install-recommends sudo git
 RUN chown -R docker ~docker && ./bin/installdependencies.sh
 
 COPY ./start.sh ./start.sh

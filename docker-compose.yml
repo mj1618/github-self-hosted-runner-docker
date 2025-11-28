@@ -9,10 +9,10 @@ services:
     volumes:
       - ./_work-1:/home/docker/actions-runner/_work
 
-  # runner-2:
-  #   build: .
-  #   environment:
-  #     - REPO=${REPO}
-  #     - TOKEN=${TOKEN}
-  #   volumes:
-  #     - ./_work-2:/home/docker/actions-runner/_work
+  runner-2:
+    build: .
+    environment:
+      - REPO=${REPO}
+      - TOKEN=${TOKEN}
+    volumes:
+      - ./_work-2:/home/docker/actions-runner/_work
